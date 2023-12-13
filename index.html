@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <p id="Counting" onclick="count_Function">Click here.</p>
+    </head>
+<body>
+
+<h2>Project 6</h2>
+
+<p id="demo"></p>
+
+<script>
+// Constructor function for animal objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create a animal object
+const myDog = new Person("John", "Doe", 1, "blue");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My dog is " + myDog.age + "."; 
+</script>
+
+<br>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let text = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = text + " to vote.";
+}
+</script>
+
+</body>
+</html>
